@@ -33,6 +33,7 @@ user3.make_withdrawal(700)
 user3.make_withdrawal(100)
 user3.make_withdrawal(100)
 ##display1
+
 user2.display_user_balance()
 user3.display_user_balance()
 ##transfer
