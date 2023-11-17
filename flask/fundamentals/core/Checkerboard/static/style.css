@@ -1,0 +1,17 @@
+body{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.col{
+    display: block;
+    align-items: center;
+}
+.ligne{
+    display: flex;
+}
+.main{
+    width: 50px;
+    height: 50px;
+}

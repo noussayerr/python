@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="background-color: {{color2}}; color: {{color1}};">*** CHECKERBOARD ***</h1>
+    <div class="col">
+        {%for j in range (0,y):%}
+            <div class="ligne">
+            {%for i in range (0,x):%}
+                {%if ((i+j)%2)==0:%}
+                    <div class="main" style="background-color: {{color1}};">
+                    </div>
+                {%else:%}
+                    <div class="main" style="background-color: {{color2}};">
+                    </div>
+                {%endif%}
+            {%endfor%}
+            </div>
+        {%endfor%}
+    </div>
+</body>
+</html>

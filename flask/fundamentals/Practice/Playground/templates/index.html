@@ -16,7 +16,6 @@
         margin: 20px;
         border-radius: 20px;
         border: 3px solid black;
-        background-color: {{wcolor}}; 
     }
     </style>
 </head>
@@ -25,7 +24,7 @@
     <h1 style="text-align: center; margin-top: 100px;">Welcome!</h1>
     <div class="main">
     {%for i in range(0,rep):%}
-        <div class="box">
+        <div class="box" style="background-color: {{wcolor}};">
 
         </div>
     {%endfor%}
