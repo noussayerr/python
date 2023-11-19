@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <form class="bg-dark text-primary p-5 rounded col-6 mx-auto" action="/result" method="post">
+        <h3 class="text-info ">Dojo Survey</h3>
+        <label class="form-label text-light" for="name">Name : </label>
+        <input class="form-control" name="name" type="text"><br>
+    
+        <label class="form-label text-light" for="location">Location : </label>
+        <select class="form-control" name="location">
+            <option value="chicago">Chicago</option>
+            <option value="new york">New york</option>
+            <option value="arizona">Arizona</option>
+        </select><br>
+    
+        <label class="form-label text-light" for="language">Language : </label>
+        <select class="form-control" name="language">
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+        </select><br>
+    
+        <label class="form-label text-light" for="comments">Comments : </label><br>
+        <textarea class="form-control" name="comments" cols="30" rows="10"></textarea><br>
+        <input  type="submit" value="Submit" class="btn btn-primary">
+    </form>
+    </div>
+</body>
+</html>
