@@ -18,5 +18,5 @@ def add_ninja_page():
 @app.route('/ninjas/<int:id>')
 def ninjas(id):
     data = {'id': id}
-    ninjas_list=dojo.get_all(data)
+    ninjas_list=dojo.get_dojos_with_ninjas(data)
     return render_template("dojos.html",ninjas_list=ninjas_list )

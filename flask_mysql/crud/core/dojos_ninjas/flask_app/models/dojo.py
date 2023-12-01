@@ -22,7 +22,7 @@ class dojo:
             dojos.append(dojo)
         return dojos
     @classmethod
-    def get_all(cls,data):
+    def get_dojos_with_ninjas(cls,data):
         query = "SELECT * FROM dojos LEFT JOIN ninjas on dojos.id = ninjas.dojo_id WHERE dojos.id = %(id)s;"      
         results = connectToMySQL(DB).query_db(query,data)
         dojo = cls(results[0])
