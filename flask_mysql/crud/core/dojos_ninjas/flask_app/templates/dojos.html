@@ -10,15 +10,14 @@
 <body>
     
     <div class="container mt-5 " style="font-family: cursive;"  >
-        
-        <h1>{{ninjas_list[0].name}} Ninjas</h1>
+        <h1>{{ninjas_list.name}} Ninjas</h1>
         <table class="table table-striped ">
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
             </tr>
-            {%for ninja in ninjas_list:%}
+            {%for ninja in ninjas_list.ninjas:%}
                 <tr>
                     <td>{{ninja.first_name}}</td>
                     <td>{{ninja.last_name}}</td>

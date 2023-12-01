@@ -1,4 +1,3 @@
-
 from flask_app.models.ninja import ninja
 from flask import render_template , request, redirect
 from flask_app import app
@@ -8,8 +7,3 @@ def new_ninja():
     data=request.form
     ninja.add_user(data)
     return redirect('/dojos')
-@app.route('/ninjas/<dojo>')
-def ninjas(dojo):
-    data = {'name': dojo}
-    ninjas_list=ninja.get_all(data)
-    return render_template("dojos.html",ninjas_list=ninjas_list )
