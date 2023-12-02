@@ -32,7 +32,7 @@ class email:
         return False
     @classmethod
     def delete(cls,data):
-        query="delete from emails where email=(%(email)s);"
+        query="delete from emails where id=(%(id)s);"
         results=connectToMySQL(DB).query_db(query, data)
         return results
     @staticmethod

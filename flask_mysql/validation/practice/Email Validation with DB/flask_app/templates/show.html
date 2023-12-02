@@ -11,7 +11,7 @@
     <div class="container mt-4 bg-dark text-light p-3" style="width: 500px;">
         
         {%for email in emails :%}
-            <p>{{email.email}}</p>
+            <p>{{email.email}} <a class="btn btn-primary " href="/delete/{{email.id}}">Delete</a></p>
         {%endfor%}
         <a href="/">Home</a>
     </div>

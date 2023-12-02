@@ -17,3 +17,8 @@ def add():
 def show():
     emails=email.show()
     return render_template("show.html",emails=emails)
+@app.route('/delete/<int:id>')
+def delete(id):
+    data={'id' : id}
+    email.delete(data)
+    return redirect('/show')
