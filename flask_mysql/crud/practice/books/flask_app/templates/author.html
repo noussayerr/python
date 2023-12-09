@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <a href="/authors" class="btn btn-dark">Home</a>
+    <div class="container d-flex mt-5 justify-content-around h6">
+        <div>
+            <h1>{{get_by_id.name}}'s favorates</h1>
+            <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>num of pages</th>
+            </tr>
+            {%for book in get_by_id.books:%}
+                <tr>
+                    <td>{{book.title}}</td>
+                    <td>{{book.num_of_pages}}</td>
+                </tr>    
+            {%endfor%}
+        </table>
+        </div>
+        <form action="/add_favorited" method="post" class="form-group">
+
+            <h1>Add Author's Favorates</h1>
+            <input type="hidden" name="author_id" value="{{get_by_id.id}}">
+            <select name="book_id" class="form-control form-control-lg">
+                <option value="" selected>select book</option>
+                {%for book in unfavorited_books:%}
+                    <option value="{{book.id}}">{{book.title}}</option>
+                {%endfor%}
+            </select>
+            <br>
+            <input type="submit" class="btn btn-dark">
+        </form>
+
+    </div>
+    
+</body>
+</html>
