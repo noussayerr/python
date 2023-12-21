@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <title>page1</title>
+</head>
+<body>
+    <div class="main">
+        <form action="submit" method="post">
+            {% csrf_token %}
+            <div class="label">
+                <label for="user_name">Your name :</label>
+                <input type="text" name="user_name">
+            </div>
+            <div class="label">
+                <label for="Location">Location :</label>
+                <select name="Location" id="">
+                    {%for location in locations %}
+                        <option value="{{location}}">{{location}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+            <div class="label">
+                <label for="Language">Language :</label>
+                <select name="Language" id="">
+                    {%for language in languages %}
+                        <option value="{{language}}">{{language}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+            <div class="label">
+                <label for="comment">Comment (option) :</label>
+                <textarea name="comment" id="" cols="30" rows="10"></textarea>        
+            </div>
+            <div >
+                <input type="submit" value="Submit" class="button">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
