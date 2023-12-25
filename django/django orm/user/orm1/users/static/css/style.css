@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+body{
+    background-color: #F8F7F6;
+}
+.container
+{
+    background-color: #D7DBE0;
+    width: 450px;
+    height: 550px;
+    margin: 10% auto;
+    box-shadow: 10px 10px #A1B4B5;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 10px;
+}
+h2{
+    color: #0E0B0B;
+    padding-top: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+h2>span{
+    color: #869D98;
+}
+.form_label{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.input1 ,.input2,.input3,.input4{
+    height: 35px;
+    background: none;
+    width: 90%;
+    transition: all 160ms ease-in;
+    border:2px solid #0E0B0B;;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 10px;
+    font-size:medium;
+    padding-left: 10px;
+}
+
+.label1{
+    color: #0E0B0B;
+    font-weight: bold;
+    position: absolute; 
+    left: 2rem;
+    top: 0.39rem;
+    padding: 0 0.5rem;
+    cursor: text;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+.label2{
+    color: #0E0B0B;
+    font-weight: bold;
+    position: absolute; 
+    left: 2rem;
+    top: 5.6rem;
+    padding: 0 0.5rem;
+    cursor: text;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+.label3{
+    color: #0E0B0B;
+    font-weight: bold;
+    position: absolute; 
+    left: 2rem;
+    top: 10.8rem;
+    padding: 0 0.5rem;
+    cursor: text;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+.label4{
+    color: #0E0B0B;
+    font-weight: bold;
+    position: absolute; 
+    left: 2rem;
+    top: 16rem;
+    padding: 0 0.5rem;
+    cursor: text;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+input:hover{
+    border-color:#F8F7F6;
+}
+input:focus{
+    border-color:#F8F7F6;
+}
+
+.input1:hover ~ .label1 , .input1:not(:placeholder-shown)~ .label1,.input1:focus~ .label1  {
+    top: -0.8rem;
+    left: 2rem;
+    font-size:1rem;
+    background-color: #D7DBE0;
+}
+.input2:hover ~ .label2 , .input2:not(:placeholder-shown)~ .label2,.input2:focus~ .label2  {
+    top: 4.49rem;
+    left: 2rem;
+    font-size:1rem;
+    background-color: #D7DBE0;
+}
+.input3:hover ~ .label3 , .input3:not(:placeholder-shown)~ .label3,.input3:focus~ .label3  {
+    top: 9.7rem;
+    left: 2rem;
+    font-size:1rem;
+    background-color: #D7DBE0;
+}
+.input4:hover ~ .label4 , .input4:not(:placeholder-shown)~ .label4,.input4:focus~ .label4  {
+    top: 14.9rem;
+    left: 2rem;
+    font-size:1rem;
+    background-color: #D7DBE0;
+}
+
+input[type=submit]{
+    width: 90%;
+    position: relative;
+    height: 35px;
+    top: 54px;
+    background-color: #869D98;
+    border-radius: 10px;
+    border: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}

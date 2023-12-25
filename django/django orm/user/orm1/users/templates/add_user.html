@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>signup page</title>
+</head>
+<body>
+    <div class="container"  method="post"> 
+        <h2>Sign <span>Up</span></h2>
+        <form action="user_add" method="post">
+            {% csrf_token %}
+            <div class="form_label">
+                <input name="first_name" class="input1" id="first_name" type="text" placeholder="">
+                <label for="first_name" class="label1">First Name</label><br><br>
+                
+                <input name="last_name" class="input2" id="last_name" type="text" placeholder="">
+                <label for="last_name" class="label2">Last Name</label><br><br>
+
+                <input name="email" class="input3" id="email" type="email" placeholder="">
+                <label for="email" class="label3">Email</label><br><br>
+                
+                <input name="age" class="input4" id="age" type="number" placeholder="">
+                <label for="age" class="label4">Age</label>
+            </div>
+            <input type="submit">
+        </form>
+        
+    </div>
+</body>
+</html>
